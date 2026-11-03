@@ -1,0 +1,18 @@
+group_col: group
+control: A
+treatment: B
+alpha: 0.05
+metrics:
+  - name: revenue per user
+    column: revenue
+    covariate: pre_revenue
+    role: primary
+  - name: conversion
+    column: converted
+    kind: proportion
+  - name: ctr
+    numerator: clicks
+    denominator: views
+  - name: sessions per user
+    column: sessions
+    role: guardrail
